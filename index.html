@@ -55,6 +55,25 @@
             z-index: 0; /* 确保图片位于文字下方 */
             animation: none; /* 取消动画 */
         }
+        /* 添加响应式设计规则 */
+        @media only screen and (max-width: 600px) {
+            /* 当屏幕宽度小于等于600px时生效 */
+
+            .container {
+                padding: 20px; /* 添加内边距以增加空间 */
+            }
+
+            h1 {
+                font-size: 24px; /* 调整大标题字体大小 */
+                margin-bottom: 10px; /* 调整大标题的下边距 */
+                text-align: center; /* 居中显示大标题 */
+            }
+
+            .module {
+                width: 90%; /* 缩小模块宽度以适应手机屏幕 */
+            }
+        }
+
     </style>
 </head>
 <body>
