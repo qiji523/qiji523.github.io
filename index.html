@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* 禁止页面滚动以保证全屏效果 */
+            overflow: auto; /* 禁止页面滚动以保证全屏效果 */
         }
         .container {
             position: relative;
@@ -48,12 +48,12 @@
         .moving-image {
             position: absolute;
             top: 50%; 
-            left: 0; 
-            transform: translate(-50%, -50%); 
+            left: 50%; 
+            transform: translate(-50%, -50%); /* 使用transform将图片水平和垂直居中 */
             width: calc(100% / 3 * 3/4); /* 图片宽度调整为原来的3/4 */
             opacity: 0.7; /* 设置透明度 */
             z-index: 0; /* 确保图片位于文字下方 */
-            animation: moveLeftRight 6s infinite; /* 延长动画持续时间为6秒 */
+            animation: none; /* 取消动画 */
         }
     </style>
 </head>
