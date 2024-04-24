@@ -12,69 +12,40 @@
             overflow: auto; /* 禁止页面滚动以保证全屏效果 */
         }
         .container {
-            position: relative;
-            height: 100vh; /* 设置容器高度为视窗高度 */
+            padding: 20px; /* 添加内边距以增加空间 */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            height: 100vh; /* 设置容器高度为视窗高度 */
         }
         h1 {
-            text-align: center;
+            font-size: 28px; /* 调整大标题字体大小 */
             margin-bottom: 20px;
+            text-align: center;
         }
         .module {
-            width: 60%; /* 将框框的宽度扩大到原来的两倍 */
+            width: 80%; /* 设置模块宽度 */
             margin-bottom: 30px;
-            border: 2px solid #000;
             padding: 15px;
-            position: relative;
-            z-index: 1; /* 确保文字位于图片上方 */
+            border: 2px solid #000;
             background-color: rgba(255, 255, 255, 0.8); /* 添加背景色并设置透明度 */
         }
         .module h2 {
             margin-top: 0;
             text-align: center;
         }
-        .module p {
-            margin-top: 5px;
-        }
-        @keyframes moveLeftRight {
-            0% { left: 0; }
-            50% { left: 50%; }
-            100% { left: 100%; }
-        }
-
-        .moving-image {
-            position: absolute;
-            top: 50%; 
-            left: 50%; 
-            transform: translate(-50%, -50%); /* 使用transform将图片水平和垂直居中 */
-            width: calc(100% / 3 * 3/4); /* 图片宽度调整为原来的3/4 */
-            opacity: 0.7; /* 设置透明度 */
-            z-index: 0; /* 确保图片位于文字下方 */
-            animation: none; /* 取消动画 */
-        }
-        /* 添加响应式设计规则 */
         @media only screen and (max-width: 600px) {
-            /* 当屏幕宽度小于等于600px时生效 */
-
-            .container {
-                padding: 20px; /* 添加内边距以增加空间 */
-            }
-
-            h1 {
-                font-size: 24px; /* 调整大标题字体大小 */
-                margin-bottom: 10px; /* 调整大标题的下边距 */
-                text-align: center; /* 居中显示大标题 */
-                display: block; /* 显示大标题 */
-            }
+            /* 响应式设计规则：屏幕宽度小于等于600px时生效 */
 
             .module {
                 width: 90%; /* 缩小模块宽度以适应手机屏幕 */
             }
+            h1 {
+                font-size: 24px; /* 调整大标题字体大小 */
+                margin-bottom: 10px;
+            }
         }
-
     </style>
 </head>
 <body>
@@ -83,30 +54,21 @@
 
         <div class="module">
             <h2>百年前的中国青年：以青春之我，创青春中国</h2>
-            <p>五四运动爆发时，面对国破家亡、山河破碎的局面，无数爱国青年勇挑历史重担，敢于直面人生，为新中国的最后胜利奠定了坚实的基础。</p>
-            <p><a href="https://www.bilibili.com/video/BV1hc411J7TY/?spm_id_from=333.880.my_history.page.click&vd_source=97f76d02f08805150617a87df28a6e25" target="_blank">开始观看 五四运动视频</a></p>
-
+            <p>五四运动爆发时，无数爱国青年勇挑历史重担，为新中国的最后胜利奠定了基础。</p>
+            <p><a href="https://www.bilibili.com/video/BV1hc411J7TY/?spm_id_from=333.880.my_history.page.click&vd_source=97f76d02f08805150617a87df28a6e25" target="_blank">观看视频</a></p>
         </div>
 
         <div class="module">
-            <h2>《钱从哪里来》：制造业数字化、服务业工业化、AI</h2>
-            <p>《钱从哪里来》是一本关于经济学的畅销书，提出了关于货币和金融的深刻见解。
-            在当今数字化浪潮中，制造业正面临着数字化转型的挑战和机遇；服务业也在工业化的道路上迈出重要步伐；人工智能技术的应用更是为各行各业带来了深远的影响。</p>
-        <!-- 在线阅读链接 -->
-         <p><a href="https://kdocs.cn/l/cuzeAMKXclc6" target="_blank">《钱从哪里来》在线阅读</a>
-        <a href="https://www.bilibili.com/video/BV1DX4y1j7n2?p=1&vd_source=97f76d02f08805150617a87df28a6e25" target="_blank">作者演讲</a>
-        <a href="https://www.zhiyitech.cn/home" target="_blank">知衣科技官网</a></p>
-
+            <h2>《钱从哪里来》：制造业数字化、服务业工业化、人工智能</h2>
+            <p>在数字化浪潮中，制造业和服务业都面临着重要的转型和机遇。</p>
+            <p><a href="https://kdocs.cn/l/cuzeAMKXclc6" target="_blank">在线阅读</a> | <a href="https://www.bilibili.com/video/BV1DX4y1j7n2?p=1&vd_source=97f76d02f08805150617a87df28a6e25" target="_blank">作者演讲</a> | <a href="https://www.zhiyitech.cn/home" target="_blank">知衣科技官网</a></p>
         </div>
 
         <div class="module">
             <h2>数字化浪潮中的新青年：结合工作分享人工智能应用实践</h2>
-            <p>“AI不会夺走你们的工作，但使用AI的人会夺走你的工作”</p>
-            <p>作为新时代青年，我们应该在人工智能的浪潮下，应提升数字素养、学习数字技术。</p>
-            <p>“志之所趋，无远弗届，穷山距海，不能限也”，新时代青年生逢盛世，肩负重任，应始终保持奋进姿态，扬起梦想的风帆，在数字化大变革中抢抓先机，建设数字中国，向着数字未来出发远航。</p>
-            <!-- 在线阅读链接 -->
-            <p><a href=" https://chat18.aichatos8.xyz" target="_blank">开始使用ChatGPT</a></p>
-
+            <p>作为新时代青年，我们应该提升数字素养，学习数字技术。</p>
+            <p>在数字化大变革中抢抓先机，建设数字中国，向着数字未来远航。</p>
+            <p><a href="https://chat18.aichatos8.xyz" target="_blank">开始使用ChatGPT</a></p>
         </div>
 
         <img src="chatgpt.png" alt="动态图片" class="moving-image">
